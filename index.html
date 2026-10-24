@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'">
+  <title>Велосервис «Спица»</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">Велосервис «Спица»</div>
+      <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Ремонт велосипедов</h1>
+      <p class="lead">Учебный демо-сайт. Все данные вымышленные.</p>
+    </section>
+
+    <section class="section" id="services">
+      <h2>Что чиним</h2>
+      <ul class="services">
+        <li>Замена камер и покрышек</li>
+        <li>Настройка переключателей скоростей</li>
+        <li>Регулировка и обслуживание тормозов</li>
+        <li>Замена цепи и кассеты</li>
+        <li>Правка колёс и подтяжка спиц</li>
+      </ul>
+    </section>
+
+    <section class="section" id="request">
+      <h2>Заявка на ремонт</h2>
+      <form class="form" id="request-form" novalidate>
+        <label class="form__field">
+          <span>Имя</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="form__field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" autocomplete="tel" required>
+        </label>
+        <label class="form__field">
+          <span>Что случилось</span>
+          <textarea name="problem" rows="4" required></textarea>
+        </label>
+        <button class="form__button" type="submit">Отправить</button>
+        <p class="form__status" id="form-status" role="status" aria-live="polite" hidden></p>
+      </form>
+      <p class="form__note">Телефон нужен, чтобы мастер перезвонил. Это учебная форма</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Обновлено: 24.10.2026</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
